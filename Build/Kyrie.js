@@ -80,7 +80,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     writable: false
   });
   kyrie = new Kyrie();
-  Object.defineProperties(global, "kyrie", {
+  Object.defineProperties(global, {
     kyrie: {
       configurable: true,
       value: kyrie

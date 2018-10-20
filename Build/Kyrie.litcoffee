@@ -256,7 +256,7 @@ It simply attaches itself to the global object at `"kyrie"`.
 For the adventurous, you can also access the `kyrie` object from
   the emoji sequence `"🌄🎼"`.
 
-    Object.defineProperties global, "kyrie",
+    Object.defineProperties global,
       kyrie:
         configurable: yes
         value: kyrie
