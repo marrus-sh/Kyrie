@@ -53,7 +53,11 @@ The following array gives the build order of our source files:
 
     buildOrder = [
       "README"
-      #  Add additional files here
+      #  Add files which both parser and engine depend upon here.
+      "Parser/README"
+      #  Add additional parser files here.
+      "Engine/README"
+      #  Add additional engine files here.
     ]
 
 There is no need to provide the `.litcoffee` extension in our build
@@ -107,7 +111,8 @@ We put a horizontal rule in-between our files to make them easier to
   debug—remember that these are still Literate CoffeeScript at this
   point.
 
-      stitchedContents = contents.join "\n\n___\n\n"
+      #  Note that contents should already end in "\n".
+      stitchedContents = contents.join "\n#{(Array 72).join "_"}\n\n"
 
 Finally, we write the stitched file to disk, for later compilation.
 We have to create the `Build/` folder if it doesn't exist.
