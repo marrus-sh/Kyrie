@@ -1,0 +1,32 @@
+{
+  "name": "Kyrie",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ᵹʼȷɛꞵɛᵹɔ (Kyebego)",
+    "url": "https://go.KIBI.family/"
+  },
+  "license": "GPL-3.0-or-later",
+  "description": "🌄🎼 A scripting engine for dialogue and text",
+  "homepage": "https://github.com/marrus-sh/Kyrie#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marrus-sh/Kyrie.git"
+  },
+  "bugs": "https://github.com/marrus-sh/Kyrie/issues",
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "coffeescript": "^2.3.2",
+    "uglify-js": "^3.1.1"
+  },
+  "directories": {
+    "doc": "./Sources",
+    "example": "./Demo",
+    "lib": "./Build"
+  },
+  "browser": "Build/Kyrie.js",
+  "scripts": {
+    "prepare": "cake build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

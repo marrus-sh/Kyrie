@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang=en>
+<title>Kyrie Demo</title>
+<meta charset=utf-8 />
+<script src=../Build/Kyrie.min.js></script>
+<script id=script type=text/plain>
+</script>
+<div id=output>
+	This demo is still under construction!!
+</div>
+<script>
+	var engine = new Kyrie(document.getElementById("script").text);
+	var waitingForChoice = false;
+	document.body.addEventListener("click", function () {
+		if (waitingForChoice) return;
+		var output = engine.advance();
+		if (!output) document.getElementById("output").textContent =
+			"This script has finished; click anywhere to restart."
+		// TODO: rendering the output.
+	})
+</script>
