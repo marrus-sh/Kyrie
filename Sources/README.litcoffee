@@ -96,7 +96,7 @@ Here is a [link](http://example.com/).
 2.  Here is item #2
 3.  Short list items like these don't end in periods
 
->   **[Issue ##](https://github.com/marrus-sh/jelli/issues) :**
+>   **[Issue ##](https://github.com/marrus-sh/Kyrie/issues) :**
 >   This is a note regarding a known issue.
 
 +   This is a list with paragraph content.
