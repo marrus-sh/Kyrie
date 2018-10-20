@@ -1,15 +1,13 @@
 <div align="right">
   <b><cite>Kyrie</cite></b><br />
   Source and Documentation<br />
-  <code>Sources/README.litcoffee</code>
+  <code>Sources/Engine/README.litcoffee</code>
   <hr />
-  <div align="left">
-    <small>
-      Copyright © 2018 Kyebego.<br />
-      Released under GNU GPLv3 or any later version; for more
-        information, see the license notice at the bottom of this
-        document.
-    </small>
+  <div align="justify">
+    Copyright © 2018 Kyebego.
+    Released under GNU GPLv3 (or any later version)—for more
+      information, see the license notice at the bottom of this
+      document.
   </div>
 </div>
 
@@ -21,6 +19,8 @@ ___
 ##  Description  ##
 
 _To come._
+
+___
 
 ##  Implementation  ##
 

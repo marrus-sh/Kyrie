@@ -1,12 +1,14 @@
 <div align="right">
-  <cite>Kyrie</cite><br />
+  <b><cite>Kyrie</cite></b><br />
   Source and Documentation<br />
   <code>INSTALL.litcoffee</code>
   <hr />
-  Copyright © 2018 Kyebego
-  <!-- If you contribute to this file, add your name here!! -->.<br />
-  Released under GNU GPLv3 or any later version; for more information,
-    see the license notice at the bottom of this document.
+  <div align="justify">
+    Copyright © 2018 Kyebego.
+    Released under GNU GPLv3 (or any later version)—for more
+      information, see the license notice at the bottom of this
+      document.
+  </div>
 </div>
 
 ___

@@ -1,6 +1,10 @@
 cs = require 'coffeescript'
 fs = require 'fs'
 
+#  Loads `INSTALL.litcoffee` and `eval`s the compiled file in the
+#    context of an empty object.
+#  The `INSTALL.litcoffee` will define tasks on `this` which we
+#    can then call.
 loadInstallFileAndDo = (Task) ->
   fs.readFile "INSTALL.litcoffee", "utf8", (
     (Error, Data) ->
@@ -13,7 +17,7 @@ task "build",
   "build Kyrie"
   -> loadInstallFileAndDo "build"
 task "watch",
-  "build and watch for changes"
+  "build Kyrie and watch for changes"
   -> loadInstallFileAndDo "watch"
 task "clear",
   "remove built files"

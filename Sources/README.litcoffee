@@ -3,13 +3,11 @@
   Source and Documentation<br />
   <code>Sources/README.litcoffee</code>
   <hr />
-  <div align="left">
-    <small>
-      Copyright © 2018 Kyebego.<br />
-      Released under GNU GPLv3 or any later version; for more
-        information, see the license notice at the bottom of this
-        document.
-    </small>
+  <div align="justify">
+    Copyright © 2018 Kyebego.
+    Released under GNU GPLv3 (or any later version)—for more
+      information, see the license notice at the bottom of this
+      document.
   </div>
 </div>
 
@@ -126,7 +124,7 @@ Here is a [link](http://example.com/).
 >   */
 >   ```
 
->   ```
+>   ```text
 >   %(
 >   This is a plain-text code block, used (for example) to present
 >   KyrieScript code.
@@ -169,6 +167,8 @@ The letter `U+01C3 ǃ LATIN LETTER RETROFLEX CLICK` is used in function
   `undefined`.
 This is _not_ the same character as `U+0021 ! EXCLAMATION MARK`, which
   will never appear in this source directly following a variable name.
+
+___
 
 ##  Implementation  ##
 
@@ -238,7 +238,7 @@ This is used when publicly exposing the prototype of objects which
         value: prototype
         writable: no
 
-###  The `Kyrie` object:
+###  The `kyrie` object:
 
 All Kyrie constants, objects, and constructors are made available
   through the `kyrie` global object.
@@ -288,7 +288,7 @@ It is recommended that the `toString()` and `valueOf()` methods be
 
       Nº: value: Object.freeze
         major: 0
-        minor: 1
+        minor: 0
         patch: 0
         toString: -> "#{@major}.#{@minor}.#{@patch}"
         valueOf: -> @major * 100 + @minor + @patch / 100

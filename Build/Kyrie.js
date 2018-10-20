@@ -97,7 +97,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     Nº: {
       value: Object.freeze({
         major: 0,
-        minor: 1,
+        minor: 0,
         patch: 0,
         toString: function toString() {
           return "".concat(this.major, ".").concat(this.minor, ".").concat(this.patch);
