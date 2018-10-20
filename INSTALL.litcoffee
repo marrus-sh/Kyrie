@@ -21,8 +21,10 @@ ___
 ##  Description  ##
 
 Kyrie can be easily built using the CoffeeScript build system, Cake.
-Just run `cake build` from this directory. You can use `cake clear` to
-  delete the built files.
+If you have CoffeeScript installed globally, run `cake build` from this
+  directory to build the files.
+(If you don't, try `./node_modules/.bin/cake build`.)
+You can use `cake clear` to delete the built files.
 
 When Cake runs, it loads the [`Cakefile`](./Cakefile), which simply
   loads and runs this file in turn.
@@ -138,7 +140,8 @@ Note the `-t` flag; we will use Babel for transpiling into an
       console.log "Compiling…"
       compiled = stitched.replace /\.litcoffee$/i, ".js"
       exec "
-        coffee -cpt #{stitched} | cat README.js - > #{compiled}
+        ./node_modules/.bin/coffee -cpt #{stitched} | cat README.js - >
+        #{compiled}
       ", (error, stdout, stderr) ->
         throw error if error
         console.log (stdout or "") + (stderr or "") if stdout or stderr
@@ -155,11 +158,11 @@ The `minify()` function accomplishes this:
       console.log "Minifying…"
       minified = compiled.replace /\.js$/, ".min.js"
       exec "
-        uglifyjs #{compiled} -c | cat README.js - > #{minified}
+        ./node_modules/.bin/uglifyjs #{compiled} -c | cat README.js - >
+        #{minified}
       ", (error, stdout, stderr) ->
         throw error if error
-        if stdout or stderr
-          console.log (stdout or "") + (stderr or "")
+        console.log (stdout or "") + (stderr or "") if stdout or stderr
         console.log "…Done."
       return
 

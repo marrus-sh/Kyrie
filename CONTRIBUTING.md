@@ -60,7 +60,7 @@ Kyrie is a simple text-based engine, so this shouldn't be a problem.
 Every change, regardless of how minor, should be submitted as a PR to
   GitHub.
 The final commit in this PR should just be a rebuild of the files in
-  [`Build/`](./Build/) (using `cake build`).
+  [`Build/`](./Build/) (using `npm run prepare`).
 Don't bother committing changes to [`Build/`](./Build/) until you are
   ready to merge.
 These PRs should then be merged in as a *squash commit*; this ensures
