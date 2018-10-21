@@ -16,8 +16,6 @@ ___
 #  INSTALL  #
 Building a fresh copy from source
 
-___
-
 ##  Description  ##
 
 Kyrie can be easily built using the CoffeeScript build system, Cake.
@@ -127,7 +125,7 @@ We have to create the `Build/` folder if it doesn't exist.
             callback "Build/Kyrie.litcoffee"
       return
 
-##  Compiling  ##
+###  Compiling:
 
 The `compile()` function compiles our stitched Literate CoffeeScript
   file.
@@ -148,7 +146,7 @@ Note the `-t` flag; we will use Babel for transpiling into an
         callback compiled
       return
 
-##  Minifying  ##
+###  Minifying:
 
 Finally, we use UglifyJS 3 to minify our final output.
 We again add a license/usage notice to the beginning of the file.
@@ -166,13 +164,13 @@ The `minify()` function accomplishes this:
         console.log "…Done."
       return
 
-##  Building  ##
+###  Building:
 
 The `build()` function just links all of the above functions together:
 
     @build = build = -> minify compile stitch collect buildOrder
 
-##  Watching  ##
+###  Watching:
 
 The `watch()` function builds, then watches for changes and
   automatically rebuilds.
@@ -186,14 +184,14 @@ The `watch()` function builds, then watches for changes and
             console.log "File `#{file}` changed, rebuilding..."
             do build
 
-##  Clearing  ##
+###  Clearing:
 
 The `clear()` function clears out the files that we created above:
 
     @clear = clear = ->
-      fs.unlink "Build/Jelli.litcoffee", ->  #  Ignore errors
-      fs.unlink "Build/Jelli.js"       , ->  #  Ignore errors
-      fs.unlink "Build/Jelli.min.js"   , ->  #  Ignore errors
+      fs.unlink "Build/Kyrie.litcoffee", ->  #  Ignore errors
+      fs.unlink "Build/Kyrie.js"       , ->  #  Ignore errors
+      fs.unlink "Build/Kyrie.min.js"   , ->  #  Ignore errors
 
 ___
 

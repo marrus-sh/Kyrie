@@ -11,16 +11,14 @@
   </div>
 </div>
 
+___
+
 #  KYRIE:PARSER  #
 KyrieScript syntax and parsing
-
-___
 
 ##  Description  ##
 
 _To come._
-
-___
 
 ##  Implementation  ##
 

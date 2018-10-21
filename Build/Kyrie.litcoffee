@@ -11,10 +11,10 @@
   </div>
 </div>
 
+___
+
 #  KYRIE  #
 🌄🎼 A scripting engine for dialogue and text
-
-___
 
 ##  Description  ##
 
@@ -167,8 +167,6 @@ The letter `U+01C3 ǃ LATIN LETTER RETROFLEX CLICK` is used in function
   `undefined`.
 This is _not_ the same character as `U+0021 ! EXCLAMATION MARK`, which
   will never appear in this source directly following a variable name.
-
-___
 
 ##  Implementation  ##
 
@@ -326,16 +324,14 @@ _______________________________________________________________________
   </div>
 </div>
 
+___
+
 #  KYRIE:PARSER  #
 KyrieScript syntax and parsing
-
-___
 
 ##  Description  ##
 
 _To come._
-
-___
 
 ##  Implementation  ##
 
@@ -374,16 +370,14 @@ _______________________________________________________________________
   </div>
 </div>
 
+___
+
 #  KYRIE:ENGINE  #
 Kyrie Behaviours and API
-
-___
 
 ##  Description  ##
 
 _To come._
-
-___
 
 ##  Implementation  ##
 

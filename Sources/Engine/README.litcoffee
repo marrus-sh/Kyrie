@@ -11,16 +11,14 @@
   </div>
 </div>
 
+___
+
 #  KYRIE:ENGINE  #
 Kyrie Behaviours and API
-
-___
 
 ##  Description  ##
 
 _To come._
-
-___
 
 ##  Implementation  ##
 
