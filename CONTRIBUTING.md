@@ -79,12 +79,12 @@ If you forgot to do this, it's easy enough to fix:
 ```bash
 git checkout master
 git pull
-git checkout my-feature-branch
+git checkout my-patch
 git reset --hard HEAD^  #  Only do this if you already ran the build
 git rebase master
 npm run prepare  #  Build
-git commit -am "Build for my-feature-branch"
-git push -u origin my-feature-branch
+git commit -am "Build for my-patch"
+git push origin my-patch
 #  [At this point, you should be able to do the squash merge through
 #    GitHub]
 ```
