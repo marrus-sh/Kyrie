@@ -72,11 +72,39 @@ These PRs should then be merged in as a *squash commit*; this ensures
  >    before making the merge helps to catch bugs and keep the software
  >    running as it should.
 
+If changes have been made to the base branch since your fork, you will
+  likely need to rebase *before* your final build.
+If you forgot to do this, it's easy enough to fix:
+
+```bash
+git checkout master
+git pull
+git checkout my-feature-branch
+git reset --hard HEAD^  #  Only do this if you already ran the build
+git rebase master
+npm run prepare  #  Build
+git commit -am "Build for my-feature-branch"
+git push -u origin my-feature-branch
+#  [At this point, you should be able to do the squash merge through
+#    GitHub]
+```
+
 Because of this workflow, PRs should be kept small and only do one or
   two things.
 For larger features, it might make sense to merge PRs into a separate
   *feature branch*, which can then be merged into `master` using a
-  *rebase commit* when complete.
+  *merge commit* when complete.
+You should run a build as part of the merge (*don't* use the GitHub
+  UI):
+
+```bash
+git checkout master
+git merge --no-ff --no-commit my-feature-branch  #  Begin the merge
+#  [Fix any conflicts which aren't in Build/]
+npm run prepare  #  Build
+git commit -am "Merge my-feature-branch onto master"  #  Finish up
+git push origin master
+```
 
 As a collaborator, you have the ability to merge PRs yourself, and you
   don't need to wait for prior approval.
