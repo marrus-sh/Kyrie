@@ -169,7 +169,7 @@ If the type of the identifier is _**command**_, then:
 + If the name of the identifier is `"TAG:"`, then the value must be a
     String
 + If the name of the identifier is `"FMT:"`, then the value must be a
-    List containing two or more Strings, and no other values
+    List containing one or more Strings, and no other values
 + If the name of the identifier is `"CALL"` or `"GOTO"`, then the value
     must be a List containing one or more values, and the first value
     in this List must be a String which is a valid Identifier name
