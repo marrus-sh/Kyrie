@@ -238,7 +238,7 @@ It is an Object with three properties:
 ###  Block:
 
 A KyrieScript **Block** represents a block of text.
-It is an Object with three properties:
+It is an Object with four properties:
 
 + The **context**, which must be an Identifier with a type of
     _**setting**_ or _**character**_
@@ -249,6 +249,13 @@ It is an Object with three properties:
   + Spans
 + The **cycle**, which must be one of _**none**_, _**list**_,
     _**loop**_, _**only once**_, or _**random**_
++ The **nextPosition**, which must be a Number
+
+A Block must not contain Choices in its contents unless its cycle is
+  _**none**_.
+
+The nextPosition of a Block must be zero unless its cycle is
+  _**list**_, _**loop**_, or _**only once**_.
 
 ###  Moments:
 
