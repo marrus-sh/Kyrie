@@ -104,6 +104,10 @@ Any Literal may be converted into a List by simply creating a List
 A List may be converted into a String by concatenating the String
   representations of each of its values, in order, with a single
   `U+0020 SPACE` character between each representation.
+If this resulting sequence of characters is longer than
+  2<sup>32</sup>&minus;1 codepoints in length, it must be truncated to
+  2<sup>32</sup>&minus;1 codepoints by removing characters from the end
+  of the string.
 
 The Number representation of a List is the number of values directly
   contained in the List.
@@ -115,7 +119,7 @@ The Boolean representation of a List is _**false**_ if it contains no
 
 The following **Objects** are all collections of **properties**.
 Properties may point to other Objects, to Lists, or to Literals.
-Each Object type provides its on restrictions on the values pointed to
+Each Object type provides its own restrictions on the values pointed to
   by its properties.
 
 ###  Identifiers:
