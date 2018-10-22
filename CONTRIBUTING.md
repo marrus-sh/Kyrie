@@ -4,18 +4,18 @@ Kyrie is built by a small team, and we're not really looking for
   outside contributions.
 If you have an idea for how we could do things differently—that's
   great!
-Kyrie is open-source so that you can implement those ideas on a fork of
-  your own.
+Kyrie is open&hyphen;source so that you can implement those ideas on a
+  fork of your own.
 
-(It is *not* open-source for the purposes of optimizing labour,
+(It is *not* open&hyphen;source for the purposes of optimizing labour,
   increasing productivity, building The Best Software Ever, or any
   other reason that places the needs of the product over the needs of
   its developers.)
 
 If you're still reading, that means that either (a) you are a new
   member of the Kyrie team trying to figure out where to get started,
-  or (b) you are a third-party trying to understand internally how we
-  work, for reasons of your own.
+  or (b) you are a third&hyphen;party trying to understand internally
+  how we work, for reasons of your own.
 Here's what you need to know:
 
 ##  The Files  ##
@@ -47,18 +47,22 @@ All other prerequisites are listed in [`package.json`](./package.json)
 
 Kyrie doesn't have any production dependencies and you shouldn't add
   any.
-The goal is a single, self-contained, well-documented script.
+The goal is a single, self-contained, well&hyphen;documented script.
 
 Kyrie is supposed to be runnable *pretty much everywhere*, and should
-  transpile (thanks to Babel) to an ES5.1-compatible script.
+  transpile (thanks to Babel) to an ES5.1&hyphen;compatible script.
 Polyfill anything that wouldn't run on Firefox 4.0 / IE 9 / Safari 5.1
   after transpiling.
-Kyrie is a simple text-based engine, so this shouldn't be a problem.
+Kyrie is a simple text&hyphen;based engine, so this shouldn't be a
+  problem.
 
 ##  Contributing Workflow  ##
 
-Every change, regardless of how minor, should be submitted as a PR to
-  GitHub.
+###  Source file changes:
+
+Every change to a file in `Sources/` (*including* changes that only
+  affect documentation), regardless of how minor, should be submitted
+  as a PR to GitHub.
 The final commit in this PR should just be a rebuild of the files in
   [`Build/`](./Build/) (using `npm run prepare`).
 Don't bother committing changes to [`Build/`](./Build/) until you are
@@ -68,9 +72,9 @@ These PRs should then be merged in as a *squash commit*; this ensures
   current code at time of commit.
 
  >  This workflow is a bit cumbersome, but that's intentional.
- >  Taking the time to give your work one last once-over in GitHub
- >    before making the merge helps to catch bugs and keep the software
- >    running as it should.
+ >  Taking the time to give your work one last once&hyphen;over in
+ >    GitHub before making the merge helps to catch bugs and keep the
+ >    software running as it should.
 
 If changes have been made to the base branch since your fork, you will
   likely need to rebase *before* your final build.
@@ -110,6 +114,24 @@ As a collaborator, you have the ability to merge PRs yourself, and you
   don't need to wait for prior approval.
 However, if the change you're making is a big one, you should probably
   chat about it with others before merging just in case.
+
+###  Other changes:
+
+If a change doesn't affect `Sources/` or the result of a build, then
+  the change may be committed directly to `master`, unless a review is
+  desired, in which case a PR should be opened.
+Examples of changes which fall under this category include:
+
++ Changes to the live demo (`Demo/`)
++ Changes to tests (`Tests/`)
++ Changes to the KyrieScript Specification (`Specification/`)
++ Changes to the top-level README, to `package.json`, or any similar
+    meta-level file which does not directly impact the source code
+    (including this one)
+
+Note that any change to `INSTALL.litcoffee` which affects the build
+  process necessarily requires a rebuild, and should be treated as a
+  source&hyphen;level change.
 
 ##  Licensing and Copyright  ##
 
