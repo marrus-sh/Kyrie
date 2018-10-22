@@ -212,7 +212,8 @@ It is an Object with four properties:
     _**subtracting**_, _**multiplying**_, _**dividing**_, or
     _**taking remainder**_
 + The **source**, which must be an Identifier whose type is *not*
-    _**command**_, a List, or a literal value
+    _**command**_, a List, a Literal, or a Variable whose identifier is
+    of type _**command**_ and whose name is `"CALL"` or `"WAIT"`.
 
 ###  Spans:
 
@@ -281,7 +282,7 @@ It is an Object with three properties:
 
 A KyrieScript **State** represents the current state of the KyrieScript
   engine.
-It is an Object with five properties:
+It is an Object with six properties:
 
 + The **characters**, which must be an unordered sequence of Contexts
     with identifiers of type _**character**_
@@ -291,7 +292,12 @@ It is an Object with five properties:
 + The **variables**, which must be an unordered sequence of Variables
 + The **position**, which must be either a List with no values, or a
     List of exactly three Numbers
++ The **stack**, which must be a List of Lists, each of which must
+    contain exactly three Numbers
 
 The position of a State represents the index of the next Moment,
   Block, and Object in the Block's contents, starting at zero.
 A position with no values indicates a terminated script.
+
+The stack of a State represents the indices of the Moments, Blocks,
+  and Objects to return to upon reaching a `"DONE"` command.
