@@ -235,10 +235,26 @@ It is an Object with three properties:
 + The **span**, which must be a Span
 + The **freshness**, which must be a Boolean
 
+###  Cycle:
+
+A KyrieScript **Cycle** represents a collection of commands, only one
+  of which is handled at a time.
+It is an Object with four properties:
+
++ The **context**, which must be an Identifier with a type of
+    _**setting**_ or _**character**_
++ The **commands**, which must be an *ordered* sequence of Variables
+    whose identifiers have type _**command**_
++ The **mode**, which must be one of _**list**_, _**loop**_,
+    _**only once**_, or _**random**_
++ The **nextPosition**, which must be a Number
+
+If mode is _**random**_, the value of nextPosition must be zero.
+
 ###  Block:
 
 A KyrieScript **Block** represents a block of text.
-It is an Object with four properties:
+It is an Object with two properties:
 
 + The **context**, which must be an Identifier with a type of
     _**setting**_ or _**character**_
@@ -246,16 +262,9 @@ It is an Object with four properties:
     following, in any order:
   + Assignments
   + Choices
+  + Cycles
   + Spans
-+ The **cycle**, which must be one of _**none**_, _**list**_,
-    _**loop**_, _**only once**_, or _**random**_
-+ The **nextPosition**, which must be a Number
-
-A Block must not contain Choices in its contents unless its cycle is
-  _**none**_.
-
-The nextPosition of a Block must be zero unless its cycle is
-  _**list**_, _**loop**_, or _**only once**_.
+  + Identifiers, which must not be of type _**command**_
 
 ###  Moments:
 
@@ -283,6 +292,6 @@ It is an Object with five properties:
 + The **position**, which must be either a List with no values, or a
     List of exactly three Numbers
 
-The position of a State represents the index of the current moment,
-  block, and Object in the block's contents, starting at zero.
+The position of a State represents the index of the next Moment,
+  Block, and Object in the Block's contents, starting at zero.
 A position with no values indicates a terminated script.
