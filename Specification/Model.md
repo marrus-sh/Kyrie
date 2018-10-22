@@ -134,7 +134,7 @@ It is an Object with two properties:
 Names must not *begin* with any of the following characters: `!.?@`.
 Names must not *begin or end* with any Unicode character which has the
   property `White_Space`.
-Names must not *end* with any of the following characters: `*+-/`
+Names must not *end* with any of the following characters: `*+/~`
 Names must not *contain* any of the following characters:
   ``%<=>[]`{|}``.
 
