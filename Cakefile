@@ -1,24 +1,23 @@
-cs = require 'coffeescript'
-fs = require 'fs'
+{ build , clear , configure , watch } = require 'Roost'
 
-#  Loads `INSTALL.litcoffee` and `eval`s the compiled file in the
-#    context of an empty object.
-#  The `INSTALL.litcoffee` will define tasks on `this` which we
-#    can then call.
-loadInstallFileAndDo = (Task) ->
-  fs.readFile "INSTALL.litcoffee", "utf8", (
-    (Error, Data) ->
-      throw Error if Error
-      eval cs.compile Data, literate: yes
-      do @[Task]
-  ).bind {}
+#  See <https://github.com/marrus-sh/Roost> for the meaning of this
+#    configuration.
+configure
+  destination: "Build/"
+  literate: yes
+  name: "Kyrie"
+  order: [
+    "README"
+    #  Add common files here
+    "Parser/README"
+    #  Add additional parser files here
+    "Engine/README"
+    #  Add additional engine files here
+  ]
+  preamble: "README.js"
+  prefix: "Sources/"
+  suffix: ".litcoffee"
 
-task "build",
-  "build Kyrie"
-  -> loadInstallFileAndDo "build"
-task "watch",
-  "build Kyrie and watch for changes"
-  -> loadInstallFileAndDo "watch"
-task "clear",
-  "remove built files"
-  -> loadInstallFileAndDo "clear"
+task "build", "build Kyrie", build
+task "watch", "build Kyrie and watch for changes", watch
+task "clear", "remove built files", clear

@@ -2,7 +2,7 @@
   "name": "Kyrie",
   "version": "0.1.0",
   "author": {
-    "name": "Ᵹʼȷɛꞵɛᵹɔ (Kyebego)",
+    "name": "Kyebego",
     "url": "https://go.KIBI.family/"
   },
   "license": "GPL-3.0-or-later",
@@ -14,10 +14,7 @@
   },
   "bugs": "https://github.com/marrus-sh/Kyrie/issues",
   "devDependencies": {
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "coffeescript": "^2.3.2",
-    "uglify-js": "^3.1.1"
+    "Roost": "git+https://github.com/marrus-sh/Roost.git"
   },
   "directories": {
     "doc": "./Sources",
