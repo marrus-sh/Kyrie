@@ -141,6 +141,9 @@ If you want credit for your work on Kyrie, be sure to remember to add
   is appended to the beginning of the compiled files.
 (Pen names, usernames, and aliases are totally fine.)
 
-By contributing to Kyrie, you agree to license your work under the GNU
-  General Public License, Version 3 or any later version, and affirm
-  that you have the necessary rights to do so.
+By contributing code to Kyrie, you agree to license your work under
+  the GNU General Public License, Version 3 or any later version, and
+  affirm that you have the necessary rights to do so.
+Likewise, by contributing documentation, you agree to license your work
+  under the Creative Commons Attribution-ShareAlike 4.0 International
+  License, and affirm that you have the necessary rights to do so.
