@@ -14,7 +14,7 @@
   },
   "bugs": "https://github.com/marrus-sh/Kyrie/issues",
   "devDependencies": {
-    "Roost": "git+https://github.com/marrus-sh/Roost.git",
+    "Roost": "git+https://github.com/marrus-sh/Roost.git#0.1.0",
     "chai": "^4.2.0",
     "mocha": "^5.2.0"
   },
