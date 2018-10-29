@@ -9,9 +9,9 @@ describe "kyrie", ->
 
   it "can't be constructed", ->
     proto = Object.getPrototypeOf global.kyrie
-    expect proto.constructor
+    do expect proto.constructor
       .throws
-    expect -> new proto.constructor
+    do expect -> new proto.constructor
       .throws
 
   it "is available from 🌄🎼 sigil", ->
