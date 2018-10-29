@@ -21,7 +21,8 @@
   "directories": {
     "doc": "./Sources",
     "example": "./Demo",
-    "lib": "./Build"
+    "lib": "./Build",
+    "test": "./Tests"
   },
   "browser": "Build/Kyrie.js",
   "scripts": {
