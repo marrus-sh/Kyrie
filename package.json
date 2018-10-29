@@ -1,6 +1,6 @@
 {
   "name": "Kyrie",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "author": {
     "name": "Kyebego",
     "url": "https://go.KIBI.family/"
@@ -14,7 +14,9 @@
   },
   "bugs": "https://github.com/marrus-sh/Kyrie/issues",
   "devDependencies": {
-    "Roost": "git+https://github.com/marrus-sh/Roost.git"
+    "Roost": "git+https://github.com/marrus-sh/Roost.git",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
   },
   "directories": {
     "doc": "./Sources",
@@ -24,6 +26,6 @@
   "browser": "Build/Kyrie.js",
   "scripts": {
     "prepare": "cake build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require coffeescript/register --file \"./Tests/kyrie.coffee\" --recursive \"./Tests/*.coffee\" --reporter dot"
   }
 }
